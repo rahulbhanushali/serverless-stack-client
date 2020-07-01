@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Amplify } from 'aws-amplify';
 import config from './config';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 Amplify.configure({
@@ -27,9 +28,9 @@ Amplify.configure({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <App />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root')
 );
 
